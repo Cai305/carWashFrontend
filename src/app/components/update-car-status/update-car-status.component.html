@@ -1,0 +1,16 @@
+<!-- update-car-status.component.html -->
+<mat-card>
+  <h2>Update Car Status</h2>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select [(ngModel)]="status" name="status" required>
+        <mat-option value="received">Received</mat-option>
+        <mat-option value="in-progress">In Progress</mat-option>
+        <mat-option value="washing">Washing</mat-option>
+        <mat-option value="completed">Completed</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Update</button>
+  </form>
+</mat-card>

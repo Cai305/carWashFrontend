@@ -1,0 +1,16 @@
+<!-- add-car.component.html -->
+<mat-card>
+  <h2>Add Car</h2>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="License Plate" [(ngModel)]="car.licensePlate" name="licensePlate" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Car Wash</mat-label>
+      <mat-select [(ngModel)]="car.carWashId" name="carWashId" required>
+        <mat-option *ngFor="let carWash of carWashes" [value]="carWash._id">{{ carWash.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Car</button>
+  </form>
+</mat-card>

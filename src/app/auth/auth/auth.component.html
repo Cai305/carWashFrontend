@@ -1,0 +1,46 @@
+<div class="auth-container mat-elevation-z8">
+  <h2>{{ isLogin ? 'Login' : 'Register' }}</h2>
+
+  <!-- Login Form -->
+  <form (ngSubmit)="onSubmit()" *ngIf="isLogin">
+    <mat-form-field>
+      <input matInput placeholder="Email" type="email" [(ngModel)]="formData.email" name="email" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password" [(ngModel)]="formData.password" name="password" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Login</button>
+  </form>
+
+  <!-- Register Form -->
+  <form (ngSubmit)="onSubmit()" *ngIf="!isLogin">
+    <mat-form-field>
+      <mat-label>User Type</mat-label>
+      <mat-select [(ngModel)]="userType" name="userType" required>
+        <mat-option value="individual">Individual</mat-option>
+        <mat-option value="carwash">Car Wash</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]="formData.name" name="name" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email" type="email" [(ngModel)]="formData.email" name="email" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password" [(ngModel)]="formData.password" name="password" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Register</button>
+  </form>
+
+  <p>
+    {{ isLogin ? 'Need an account?' : 'Already have an account?' }}
+    <a (click)="toggleForm()">{{ isLogin ? 'Register' : 'Login' }}</a>
+  </p>
+</div>

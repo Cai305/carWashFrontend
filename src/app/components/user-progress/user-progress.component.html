@@ -1,0 +1,19 @@
+<div class="progress-container">
+  <h2>Your Car's Status</h2>
+
+  <mat-card *ngIf="carStatus">
+    <mat-card-header>
+      <mat-card-title>{{ carStatus.licensePlate }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-progress-bar mode="determinate" [value]="getProgressPercentage()"></mat-progress-bar>
+      <p>Current Status: {{ carStatus.status }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <div *ngIf="!carStatus" class="loading">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Loading car status...</p>
+  </div>
+</div>
