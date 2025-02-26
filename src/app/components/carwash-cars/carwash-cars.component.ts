@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
-import { CarService } from '../../car.service';
 import { RouterModule } from '@angular/router';
+import { CarService } from '../../services/car.service';
 
 
 @Component({

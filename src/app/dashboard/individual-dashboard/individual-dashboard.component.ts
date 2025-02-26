@@ -5,9 +5,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
-import { CarService } from '../../car.service';
 import { Router } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
+import { CarService } from '../../services/car.service';
 
 @Component({
   selector: 'app-individual-dashboard',

@@ -7,7 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
-import { CarService } from '../../car.service';
+import { CarService } from '../../services/car.service';
+
 
 @Component({
   selector: 'app-add-car',

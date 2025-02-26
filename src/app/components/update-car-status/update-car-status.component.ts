@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CarService } from '../../car.service';
+import { CarService } from '../../services/car.service';
 
 
 @Component({
