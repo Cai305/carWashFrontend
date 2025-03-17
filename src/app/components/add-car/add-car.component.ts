@@ -18,13 +18,22 @@ import { CarService } from '../../services/car.service';
   styleUrls: ['./add-car.component.scss'],
 })
 export class AddCarComponent {
-  car = { licensePlate: '', carWashId: '' };
+  car = { licensePlate: '', carWashId: '', user_id:''};
   carWashes: any[] = [];
 
   constructor(private carService: CarService, private router: Router) {}
 
   ngOnInit() {
     this.carService.getCarWashes().subscribe((data:any) => (this.carWashes = data));
+    const user = localStorage.getItem('user');
+    let user_id : any;
+    if(user != null){
+      user_id = JSON.parse(user);
+
+      console.log("user_id : ",user_id._id)
+      this.car.user_id = user_id._id;
+
+    }
   }
 
   onSubmit() {

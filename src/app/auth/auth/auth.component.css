@@ -1,0 +1,13 @@
+.loading {
+  position: fixed; /* Ensures it stays in place even when scrolling */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the element */
+  z-index: 9999; /* Puts it above all other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8); /* Optional: Adds a translucent background */
+  padding: 20px;
+  border-radius: 10px; /* Optional: Rounded corners */
+}

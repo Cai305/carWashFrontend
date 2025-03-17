@@ -24,4 +24,8 @@ export class CarWashService {
   getCarStatus(userId: string) {
     return this.http.get<CarStatus>(`${this.apiUrl}/cars/${userId}`);
   }
+
+  getCarWashes() {
+    return this.http.get(`${this.apiUrl}/carwashes`);
+  }
 }

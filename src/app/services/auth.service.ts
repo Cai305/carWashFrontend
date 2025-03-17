@@ -10,7 +10,9 @@ interface User {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private apiUrl = 'https://carwash-1.onrender.com/api'; // Update with your backend API
+  //private apiUrl = 'https://carwash-1.onrender.com/api'; Update with your backend API
+  private apiUrl = 'http://localhost:3000/api'; // Update with your backend API
+
 
   constructor(private http: HttpClient) {}
 

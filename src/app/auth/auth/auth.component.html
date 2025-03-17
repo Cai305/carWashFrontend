@@ -13,7 +13,9 @@
 
     <button mat-raised-button color="primary" type="submit">Login</button>
   </form>
-
+  <div *ngIf="loadingStatus" class="loading">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
   <!-- Register Form -->
   <form (ngSubmit)="onSubmit()" *ngIf="!isLogin">
     <mat-form-field>
@@ -26,6 +28,10 @@
 
     <mat-form-field>
       <input matInput placeholder="Name" [(ngModel)]="formData.name" name="name" required>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="userType === 'carwash'">
+      <input matInput placeholder="Location/Address" [(ngModel)]="formData.location" name="location" required>
     </mat-form-field>
 
     <mat-form-field>
@@ -44,3 +50,5 @@
     <a (click)="toggleForm()">{{ isLogin ? 'Register' : 'Login' }}</a>
   </p>
 </div>
+
+
