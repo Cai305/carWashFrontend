@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class CarService {
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = 'https://carwash-1.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 
